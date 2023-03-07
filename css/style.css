@@ -1,0 +1,152 @@
+:root {
+    /* Primary colors */
+    --clr-base: hsl(158, 36%, 37%);
+    --clr-stylish: hsl(30, 38%, 92%);
+    /* Secondary colors */
+    --clr-dark: hsl(212, 21%, 14%);
+    --clr-light: hsl(228, 12%, 48%);
+    --clr-white: hsl(0, 0%, 100%);
+    /* Fonts */
+    --fnt-second: 'Fraunces', serif;
+    --fnt-main: 'Montserrat', sans-serif;
+
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+    height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+body {
+    font-weight: 300;
+    font-family: var(--fnt-main);
+    background-color: var(--clr-stylish);
+    font-size: .835rem;
+    color: var(--clr-light);
+    display: grid;
+    place-content: center;
+    margin: 1rem;
+}
+
+.catalog {
+    background-color: var(--clr-white);
+    border-radius: 1em;
+    overflow: hidden;
+}
+.perfume__img{
+}
+.paragraph__category{
+    font-family: var(--fnt-main);
+    letter-spacing: .3em;
+    font-size: .7rem;
+    text-transform: uppercase;
+
+}
+.catalog__tittle{
+    color: var(--clr-dark);
+    font-family: var(--fnt-second);
+    margin-top: .5em;
+    font-size: 1.8rem;
+    line-height: 1.1;
+}
+.paragraph__about{
+    margin: 1em 0;
+    line-height: 1.7;
+}
+.flex__group{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.catalog__content{
+    display: grid;
+    padding: 1rem;
+}
+.price{
+    font-family: var(--fnt-second);
+    color:var(--clr-base);
+    font-size: 1.5rem;
+}
+.button{
+    background-color: var(--clr-base);
+    color: var(--clr-white);
+    text-decoration: none;
+    font-weight: 700;
+    border-style: none;
+    padding: 1em 1.5em;
+    border-radius: .85em;
+    margin-top: 1em;
+}
