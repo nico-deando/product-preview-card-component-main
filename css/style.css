@@ -1,6 +1,7 @@
 :root {
     /* Primary colors */
     --clr-base: hsl(158, 36%, 37%);
+    --clr-base-darker: hsl(158, 36%, 22%);
     --clr-stylish: hsl(30, 38%, 92%);
     /* Secondary colors */
     --clr-dark: hsl(212, 21%, 14%);
@@ -90,6 +91,7 @@ h6 {
 }
 
 body {
+    min-width: 300px;
     font-weight: 300;
     font-family: var(--fnt-main);
     background-color: var(--clr-stylish);
@@ -101,15 +103,19 @@ body {
 }
 
 .catalog {
+    display: grid;
+    place-content: center;
+    max-width: 600px;
     background-color: var(--clr-white);
     border-radius: 1em;
     overflow: hidden;
 }
-.perfume__img{
-}
+
+
+
 .paragraph__category{
     font-family: var(--fnt-main);
-    letter-spacing: .3em;
+    letter-spacing: .5em;
     font-size: .7rem;
     text-transform: uppercase;
 
@@ -138,15 +144,46 @@ body {
 .price{
     font-family: var(--fnt-second);
     color:var(--clr-base);
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 .button{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
     background-color: var(--clr-base);
     color: var(--clr-white);
     text-decoration: none;
-    font-weight: 700;
     border-style: none;
-    padding: 1em 1.5em;
+    padding: 0.5em 1.5em;
+    gap: 1em;
     border-radius: .85em;
     margin-top: 1em;
+}
+.button[data-icon="shopping-icon"]::before{
+    content:"";
+    width: 15px;
+    height: 16px;
+    background-image: url("/images/icon-cart.svg");
+}
+.button:is(:focus, :hover){
+    background-color: var(--clr-base-darker);
+}
+
+
+@media(min-width:600px){
+    .catalog{
+        grid-template-columns: 1fr 1fr;
+    }
+    .catalog__tittle{
+        font-size: 2.2rem
+    }
+    .paragraph__about{
+        font-size: 1rem;
+    }
+    .button{
+        margin-top: 15px;
+        padding: 1em;
+    }
+    
 }
